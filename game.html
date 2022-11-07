@@ -6,7 +6,11 @@
             margin-left: auto;
             margin-right: auto;
             width: 50%;
-          }</style>
+          }
+          h1 {
+            text-align: center;
+        }
+          </style>
     </head>
 <body> 
     <table border="0" width="100%" height="700px">
@@ -22,7 +26,42 @@
                 <th> <a href="#"> Contact Us </a></th>
             </tr>
         </tr>
-        <tr><th colspan="6"> <img src="game1.png" alt="game" align="center" class="center"></th>
+        <tr><th colspan="6"> <img src="game1.png" alt="game" align="center" class="center" width="100%" height="500px"></th>
+        </tr>
+        <tr>
+            <th colspan="6"><font color="black" face="Comic sans MS" size="5"><h1>Click on the video!!!</h1></font></th>
+        </tr>
+        <tr>
+            <th colspan="6"><video width="500" height="240" controls>
+                <source src="Guess The Movie By Emoji.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video><br>
+
+              <p>Get your current location</p>
+              <p>while you play</p>
+
+                    <button onclick="getLocation()">Get Location</button>
+
+              <p id="demo"></p>
+              
+              <script>
+                var x = document.getElementById("demo");
+                
+                function getLocation() {
+                  if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                  }
+                }
+                
+                function showPosition(position) {
+                  x.innerHTML = "Latitude: " + position.coords.latitude + 
+                  "<br>Longitude: " + position.coords.longitude;
+                }
+                </script>
+                
+            </th>
         </tr>
 
    </body>
