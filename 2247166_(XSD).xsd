@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.w3schools.com"
+xmlns="https://www.w3schools.com"
+attributeFormDefault="unqualified"
+elementFormDefault="qualified">
+<xs:element name="quizgame" type="quizgameType"/>
+  <xs:complexType name="quizType">
+    <xs:sequence>
+      <xs:element name="quiz" maxOccurs="unbounded" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+              <xs:element type="xs:string" name="question"/>
+              <xs:element type="xs:string" name="A" maxOccurs="1" minOccurs="1"/>
+              <xs:element type="xs:string" name="B" maxOccurs="1" minOccurs="1"/>
+              <xs:element type="xs:string" name="C" maxOccurs="1" minOccurs="1"/>
+              <xs:element type="xs:string" name="D" maxOccurs="1" minOccurs="1"/>
+              <xs:element  name="choice">
+                  <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                  <xs:pattern value="[ABCD]"/>
+                  </xs:restriction>
+                  </xs:simpleType>
+              </xs:element>
+              <xs:element type="xs:string" name="answer"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="category" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="quizgameType">
+    <xs:sequence>
+      <xs:element type="quizType" name="quiz" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

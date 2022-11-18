@@ -1,0 +1,11 @@
+<!ELEMENT quizgame (quiz*)>
+<!ELEMENT quiz (question,A,B,C,D,choice,answer)>
+<!ELEMENT question (#PCDATA)>
+<!ELEMENT A (#PCDATA)>
+<!ELEMENT B (#PCDATA)>
+<!ELEMENT C (#PCDATA)>
+<!ELEMENT D (#PCDATA)>
+<!ELEMENT choice (#PCDATA)>
+<!ELEMENT answer (#PCDATA)>
+<!ATTLIST quiz category ID #REQUIRED>
+

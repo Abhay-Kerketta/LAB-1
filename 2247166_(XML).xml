@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quizgame SYSTEM "Quizgame.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<quizgame>
+   <quiz category="Computer_Science">
+      <question>Who is the inventor of Difference Engine?</question>
+      <A>Allen Turing</A>
+      <B>Ken Thompson</B>
+      <C>Charles Babbage</C>
+      <D>Steve Lawrence</D>
+      <choice>C</choice>
+      <answer>Charles Babbage</answer>  
+   </quiz>
+   <quiz category="Physics">
+      <question>Who is known as the Father of Father of Nuclear Physics?</question>
+      <A>Ernest Rutherford</A>
+      <B>Albert Einstein</B>
+      <C>Isaac Newton</C>
+      <D>Stephen Hawking</D>
+      <choice>A</choice>
+      <answer>Ernest Rutherford</answer>
+   </quiz>
+   <quiz category="Chemistry">
+      <question>Who is known as the father of modern chemistry?</question>
+      <A>John Dalton</A>
+      <B>Robert Boyle</B>
+      <C>Antoine Lavoisier</C>
+      <D>Democriyus</D>
+      <choice>C</choice>
+      <answer>Antoine Lavoisier</answer> 
+   </quiz>
+   <quiz category="Geography">
+      <question>What country has the most natural lakes?</question>
+      <A>United States</A>
+      <B>Australia</B>
+      <C>India</C>
+      <D>Canada</D>
+      <choice>D</choice>
+      <answer>Canada</answer>
+   </quiz>
+   <quiz category="History">
+      <question>Which of the following person started to spread Christianity throughout the Roman world?</question>
+      <A>Paul</A>
+      <B>Simon</B>
+      <C>Jesus</C>
+      <D>Peter</D>
+      <choice>A</choice>
+      <answer>Paul</answer>
+   </quiz>
+   <quiz category="Maths">
+      <question>Who is considered the father of Mathematics?</question>
+      <A>Pythagorus</A>
+      <B>Euclid</B>
+      <C>Lao Tzu</C>
+      <D>Kapil Dev</D>
+      <choice>A</choice>
+      <answer>Pythagorus</answer>
+   </quiz>  
+   <quiz category="General_Knowledge">
+      <question>Who wrote the book Wealth of Nations?</question>
+      <A>Raghuram Rajan</A>
+      <B>John Maynard Keynes</B>
+      <C>Adam Smith</C>
+      <D>None of the above</D>
+      <choice>C</choice>
+      <answer>Adam Smith</answer>  
+   </quiz>
+   <quiz category="Syports">
+      <question>The Commonwealth Games started from which among the following countries?</question>
+      <A>England</A>
+      <B>Australia</B>
+      <C>Canada</C>
+      <D>India</D>
+      <choice>C</choice>
+      <answer>Canada</answer>
+   </quiz>    
+</quizgame>
