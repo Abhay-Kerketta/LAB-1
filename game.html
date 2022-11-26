@@ -8,8 +8,9 @@
             margin-left: auto;
             margin-right: auto;
             width: 50%;
-          }-->
+            }-->
           <link rel="stylesheet" href="styles.css">
+          <style>
           h1 {
             text-align: center;
         }
@@ -29,7 +30,7 @@
                 <th> <a href="#"> Contact Us </a></th>
             </tr>
         </tr>
-        <tr><th colspan="6"> <img src="game1.png" alt="game" align="center" class="center" width="100%" height="500px"></th>
+        <tr><th colspan="6"> <img src="game.jpg" alt="game" align="center" class="center" width="100%" height="500px"></th>
         </tr>
         <tr>
             <th colspan="6"><font color="black" face="Comic sans MS" size="5"><h1>Click on the video!!!</h1></font></th>
@@ -38,17 +39,140 @@
             <th colspan="6"><video width="500" height="240" controls>
                 <source src="Guess The Movie By Emoji.mp4" type="video/mp4">
               Your browser does not support the video tag.
-              </video><br>
+              </video><br><br><br>
+
+              <button type="button" onclick="loadDoc()">Play Quiz</button>
+              <table border="0" align="center" height="500px" id="mcq">
+                <tr>
+                  <th colspan="4">Quiz Section</th>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques1" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques1_a"></td>
+                  <td id="ques1_b"></td>
+                  <td id="ques1_c"></td>
+                  <td id="ques1_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques2" colspan="4"></td> 
+                </tr>
+                <tr>
+                  <td id="ques2_a"></td>
+                  <td id="ques2_b"></td>
+                  <td id="ques2_c"></td>
+                  <td id="ques2_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques3" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques3_a"></td>
+                  <td id="ques3_b"></td>
+                  <td id="ques3_c"></td>
+                  <td id="ques3_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques4" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques4_a"></td>
+                  <td id="ques4_b"></td>
+                  <td id="ques4_c"></td>
+                  <td id="ques4_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques5" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques5_a"></td>
+                  <td id="ques5_b"></td>
+                  <td id="ques5_c"></td>
+                  <td id="ques5_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques6" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques6_a"></td>
+                  <td id="ques6_b"></td>
+                  <td id="ques6_c"></td>
+                  <td id="ques6_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px" ></td>
+                </tr>
+                <tr>
+                  <td id="ques7" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques7_a"></td>
+                  <td id="ques7_b"></td>
+                  <td id="ques7_c"></td>
+                  <td id="ques7_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <tr>
+                  <td id="ques8" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td id="ques8_a"></td>
+                  <td id="ques8_b"></td>
+                  <td id="ques8_c"></td>
+                  <td id="ques8_d"></td>
+                </tr>
+                <tr>
+                  <td colspan="4" height="10px"></td>
+                </tr>
+                <!--<tr>
+                <td><button onclick="delNode()">Delete Node</button></td>
+                <td><button onclick="delElement()">Delete Element</button> </td>
+                <td><button onclick="change()">Change Element</button> </td>
+                <td><button onclick="addElement()">Add Element</button> </td>
+
+                </tr>-->
+              </table><br/>
+              <h3>Deleting the block of node </h3>
+              <p id="del_node"></p><br />
+              <h3>Deleting a particular element in the node</h3>
+              <p id="del_element"></p><br />
+              <h3>Change the node value</h3>
+              <p id="change"></p><br />
+              <h3>Adding new element ('time')</h3>
+              <p id="new_element"></p>
+              <script src="script.js">
+              </script> 
 
               <p>Get your current location</p>
               <p>while you play</p>
 
                     <button onclick="getLocation()">Get Location</button>
 
-              <p id="demo"></p>
+              <p id="geoloc"></p>
               
               <script>
-                var x = document.getElementById("demo");
+                var x = document.getElementById("geoloc");
                 
                 function getLocation() {
                   if (navigator.geolocation) {
