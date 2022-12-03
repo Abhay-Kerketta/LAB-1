@@ -2,48 +2,187 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Quiz Dojo</title>
-       <!-- <style>.center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-          }</style>-->
-        <<link rel="stylesheet" href="styles.css">
+        <title>Login</title>
+        <link rel="stylesheet" href="styles2.css">
+       
     </head>
-<body> 
+ <body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="75px" width="100%" > 
+        </div>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About Us </a></li></th>
+            <li><a href="#"> Contact Us </a></li>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="login">
+            <h2>Login</h2>
+            <form name="login-form" id="login" action="action_page.php"  onsubmit="return validateForm()" method="post">
 
-    <table border="0" width="100%" height="700px" background="login.jpg" width="100%"  height="100">
-    <!----Row1---->
-        <tr>
-            <th width="150px">
-                <img src="logo.png" alt="logo" height="150px" width="150px" > 
-            </th>
-            <th><font face="Monoton" style="font-size:300%;"> Quiz Dojo </font> </th>
-            <th></th>
-            <th> <a href="index.html"> Home </a> </th>
-            <th> <a href="about.html"> About Us </a></th>
-            <th> <a href="#"> Contact Us </a></th>
-        </tr>
-        <tr><th colspan="6"> 
-        <!--form elements-->
-        <form action="#">
+               <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" placeholder="Your first name.." required><br>
+                <span id="fnameerror" class="text-danger font-weight-bold" ></span><br>
+                
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name"><br>
+                <span id="lnameerror" class="text-danger font-weight-bold"></span><br>
 
-            <legend>Log In:</legend><br><br>
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label>Male<input type="radio" name="gender" value="male" /></label>
-            <label>Female<input type="radio" name="gender" value="female" /></label><br><br>
-            <label>Email:<input type="email" name="email" /></label><br><br>
-            <label for="pwd">Password:</label>
-            <input type="password" id="pwd" name="pwd"><br><br>
+                <label for="mobile">Enter a mobile number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required><br>
+                <span id="mobileerror" class="text-danger font-weight-bold"></span><br>
 
-            <input type="submit" value="Login">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required/><br>     
+                <span id="emailerror" class="text-danger font-weight-bold"></span><br>
+
+                <label for="psw">Password:</label>
+                <input type="password" id="psw" name="psw" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+                
+                <label for="psw">Confirm Password:</label>
+                <input type="password" id="psw2" name="psw2" placeholder="Confirm password" requied><br>
+                <span id="passerror" class="text-danger font-weight-bold"></span><br>
+
+                <input type="submit" value="Login" name="login" id="loginbtn">
+            
+            </form>
+        </div>
+
+ 
+    <div id="msg">
+        <h3>Password must contain the following:</h3>
+         <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+         <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+         <p id="number" class="invalid">A <b>number</b></p>
+         <p id="length" class="invalid">Minimum <b>8 characters</b></p>
         
-          </form> </th>
-        </tr>
-    </table>
-</body>
+    </div>
+   
+    <script>
+        var fname = document.getElementById('fname');
+        var lname = document.getElementById('lname');
+        var mobile = document.getElementById('mobile');
+        var email = document.getElementById('email');
+
+        var namecheck = /^[A-Za-z. ]{3,30}$/ ;
+        var mobilecheck = /^[789][0-9]{9}$/;
+        var emailcheck = /^[A-Za-z]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+
+        fname.onkeyup = function() {
+        if(namecheck.test(fname.value)){
+            document.getElementById('fnameerror').innerHTML = " ";
+        }
+        else{
+            document.getElementById('fnameerror').innerHTML = " ***Name is invalid";
+            return false;
+        }
+    }
+        lname.onkeyup = function() {
+        if(namecheck.test(lname.value)){
+            document.getElementById('lnameerror').innerHTML = " ";
+        }
+        else{
+            document.getElementById('lnameerror').innerHTML = " ***Name is invalid";
+            return false;
+        }
+    }
+
+       
+        var password = document.getElementById("psw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        var password2 = document.getElementById("psw2");
+
+        // When the user clicks on the password field, show the message box
+        password.onfocus = function() {
+        document.getElementById("msg").style.display = "block";
+        }
+
+        // When the user clicks outside of the password field, hide the message box
+        password.onblur = function() {
+        document.getElementById("msg").style.display = "none";
+         }
+
+        // When the user starts to type something inside the password field
+        password.onkeyup = function() {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if(password.value.match(lowerCaseLetters)) {
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+            } 
+            else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+                }
+
+         // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if(password.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+            } 
+            else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+             }
+
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if(password.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+            } 
+            else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+             }
+
+            // Validate length
+             if(password.value.length >= 8) {
+             length.classList.remove("invalid");
+            length.classList.add("valid");
+            } 
+            else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+             }
+            }
+            password2.onkeyup = function() {
+             if(password2.value.match(password.value)){
+                 document.getElementById('passerror').innerHTML = " ";
+                 }
+             else{
+                 document.getElementById('passerror').innerHTML = " ***Password is not matching";
+                  return false;
+                 }
+                }
+
+                 email.onkeyup = function() {
+                 if(emailcheck.test(email.value)){
+                document.getElementById('emailerror').innerHTML = " ";
+                    }
+                    else{
+                    document.getElementById('emailerror').innerHTML = " ***Email is invalid";
+                return false;
+                }
+            }
+            mobile.onkeyup = function() {
+                 if(mobilecheck.test(mobile.value)){
+                document.getElementById('mobileerror').innerHTML = " ";
+                    }
+                    else{
+            document.getElementById('mobileerror').innerHTML = " ***Mobile number is invalid";
+            return false;
+        }
+    }
+             
+        </script>
+</div>
+ </body>  
+
 </html>
