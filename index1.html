@@ -4,6 +4,12 @@
         <meta charset="utf-8">
         <title>Quiz Dojo</title>
         <link rel="stylesheet" href="styles1.css">
+        <style>
+          fieldset{
+            margin-bottom: 20px;
+
+          }
+        </style>
         <script>
 
             function setCookie(cname,cvalue,exdays) {
@@ -52,7 +58,7 @@
             <li><a href="index.html"> Home </a></li>
             <li><a href="login.html"> Login </a></li>
             <li><a href="about.html"> About Us </a></li></th>
-            <li><a href="#"> Contact Us </a></li>
+            <li><a href="settings.html"> Settings </a></li>
         </ul>
     </nav>
     <div class="main">
@@ -69,12 +75,54 @@
           Your browser does not support the audio element.
           </audio>
         </div>
-        <div class="text1"
-        <font color="black" face="Comic sans MS" size="5">
-        <h1 align="center">Make learning intresting! </h1> <br>
-        <h2 align="center"> Want to know how? </h2>
-    </font>
-    </div>
+        <div class="text1">
+          <font color="black" face="Comic sans MS" size="5">
+          <h1 align="center">Make learning intresting! </h1> <br>
+          <h2 align="center"> Want to know how? </h2>
+          </font>
+        </div>
+      </div>
+      <div>
+        <h2 id="title">Local Storage</h2>
+          <input id="inpKey" type="text" placeholder="Enter Key">
+          <input id="inpValue" type="text" placeholder="Enter value">
+          <button type="button" id="btnInsert">Enter</button>
+        
+          <h2>Local Storage</h2>
+          <div class="lsOutput"></div>
+      
+        </body>
+            <script type="text/javascript">
+              const inpKey = document.getElementId("inpKey");
+              const inpValue = document.getElementById("inpValue");
+              const btnInsert = document.getElementById("btnInsert");
+              const lsOutput = document.getElementById("lsOutput");
+
+              btnInsert.onclick = function() {
+                const key = inpKey.value;
+                const value = inpValue.value;
+
+                console.log(key);
+                console.log(value);
+
+                if(key && value){
+                  localStorage.setItem(key,value);
+                  location.reload();
+                }
+              };
+              for(let i=0;i<localStorage.length; i++){
+                const key = localStorqage.key(i);
+                const value = localStorage.getItem(key);
+
+                lsOutput.innerHTML += '${key}: ${value}<br />';
+              }
+
+
+
+    
+
+            </script>
+      </div>
     </div>
 
 

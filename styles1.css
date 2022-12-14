@@ -41,6 +41,38 @@ div.main{
   width:100%;
   margin: 0px auto 0px auto;
 }
+div.cookies{
+  width:100%;
+  padding-top: 100px;
+  text-align: center;
+  
+}
+div.localStorage{
+  width:100%;
+  padding-top: 100px;
+  text-align: center;
+}
+
+div.sessionStorage{
+  width:100%;
+  padding-top: 100px;
+  text-align: center;
+}
+
+input{
+ padding: 7px;
+ height: 40px;
+ width: 200px;
+}
+.button {
+  background-color: #e7e7e7; 
+  color: black;
+  border: 2px solid #2d2f2d; 
+  font-size: 15px;
+  padding: 14px 40px;
+  border-radius: 3px;
+}
+
 div.slider{
   background: url("background.png");
   width: 100%;

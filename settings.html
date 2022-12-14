@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Quiz Dojo</title>
+        <link rel="stylesheet" href="styles1.css">
+    </head>
+    <body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="75px" width="100%" > 
+        </div>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="about.html"> About Us </a></li></th>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="cookies">
+            <h1>Welcome to Cookie Settings</h1><br/>
+            <input type="button" id="btnCreate" class="button" value="Add Cookies" onclick="CreateCookies()"/>
+            <input type="button" id="btnCheck" class="button" value="Display Cookies" onclick="displayCookie()"/>
+            <input type="button" id="btnDelete" class="button" value="Remove Cookies" onclick="deleteAllCookies()"/><br/><br/>
+            <p id="show" style="text-align: center; font-size:20px"></p>
+        </div><br/><br/>
+        <div class="localStorage">
+            <h1>Favourites</h1>
+            <select id="inpKey" name="key" style="padding: 7px; height: 55px; width: 200px;">
+                <option value="subject">Subject</option>
+                <option value="topic">Topic</option>
+              </select>
+            <input id="inpValue" type="text" placeholder="Enter value">
+            <button type="button" id="btnInsert" class="button">Insert Data</button>
+            <br/><br/>
+            <h2>Local Storage</h2>
+            <p id="lsOutput" style="text-align:center"></p>
+        </div>
+        <div class="sessionStorage">
+            <select id="inpKey1" name="key" style="padding: 7px; height: 55px; width: 200px;">
+                <option value="location">Location</option>
+                <option value="age">Age</option>
+              </select>
+            <input id="inpValue1" type="text" placeholder="Enter value">
+            <button type="button" id="btnInsert1" class="button">Insert Data</button><br/>
+            <h2>Session Storage</h2>
+            <p id="SsOutput" style="text-align:center"></p>
+        </div>
+        <script>
+            //Create Cookies
+            function CreateCookies(){
+                let name = prompt("Enter Cookie name");
+                if (checkCookies(name)==true)
+                {
+                    alert(name + "already exist, please user other name");
+                    return CreateCookies();
+                }
+                let val = prompt("Enter Cookie value");
+
+                document.cookie = name + "=" + val;
+               // displayCookie();
+            }
+           
+
+            //Display Cookies
+            function displayCookie(){
+            document.getElementById('show').innerHTML=document.cookie;
+            };
+
+            //Check cookies
+            function checkCookies(name){
+                if(document.cookie.length == 0){
+                    return false;
+                }
+                else{
+                    let cooki = document.cookie.split(';');
+                    for(let i =0; i<cooki.length;i++)
+                    {
+                        let _name = cooki[i].split('=')[0];
+                        if(_name.trim()=name.trim())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            };
+
+            //Remove Cookies
+            function deleteAllCookies(){
+                let cooki = document.cookie.split(';');
+                    for(let i =0; i<cooki.length;i++)
+                    {
+                        let _name = cooki[i].split('=')[0];
+                        document.cookie = _name + "=; expires = 1 Dec 2020 00:00:00";
+                        document.getElementById('show').innerHTML = document.cookie;
+                     }
+                };
+
+                //local storage
+                const inpKey = document.getElementById("inpKey");
+                const inpValue = document.getElementById("inpValue");
+                const btnInsert = document.getElementById("btnInsert");
+                const lsOutput = document.getElementById("lsOutput");
+            
+                btnInsert.onclick = function(){
+                    const key = inpKey.value;
+                    const value = inpValue.value;
+
+                  
+                    if ( key && value)
+                    {
+                        localStorage.setItem(key,value);
+                        location.reload();
+                    }
+                };
+
+                for(let i =0;i<localStorage.length;i++){
+                    const key = localStorage.key(i);
+                    const value = localStorage.getItem(key);
+
+                    lsOutput.innerHTML += `${key}: ${value}  <br>`; 
+                   
+                }
+
+                //session storage
+                const inpKey1 = document.getElementById("inpKey1");
+                const inpValue1 = document.getElementById("inpValue1");
+                const btnInsert1 = document.getElementById("btnInsert1");
+                const SsOutput = document.getElementById("SsOutput");
+            
+                btnInsert1.onclick = function(){
+                    const key1 = inpKey1.value;
+                    const value1 = inpValue1.value;
+
+                  
+                    if ( key1 && value1)
+                    {
+                        sessionStorage.setItem(key1,value1);
+                    }
+                };
+
+                for(let i =0;i<sessionStorage.length;i++){
+                    const key1 = sessionStorage.key(i);
+                    const value1 = sessionStorage.getItem(key1);
+
+                    SsOutput.innerHTML += `${key1}: ${value1}  <br>`; 
+                   
+                }
+
+        </script>
+    
+    </div>
+
+
+        
+    </div>
+    </body>
+    </html>

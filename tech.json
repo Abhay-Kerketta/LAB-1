@@ -1,0 +1,22 @@
+[
+      { "question":"Charles Babbage invented the first what?", "answer":"Computer" },
+      { "question":"Computers calculate by using circuits called logic what?", "answer":"Gates"},
+      { "question":"Blaupunkt is a car audio brand from which country?", "answer":"Germany"},
+      { "question":"Computer movie company Pixar is owned by which brand?", "answer":"Disney"},
+      { "question":"Clarence Birdseye invented which industry?", "answer":"Frozen Food"},
+      { "question":"Compaq was bought by which other large computer brand in 2007?", "answer":"HP"},
+      { "question":"Change.org carries which sort of content?", "answer":"Petitions"},
+      { "question":"Cellphones sold under the Pixel brandname are made by which company?", "answer":"Google"},
+      { "question":"Before Apple became the most valuable company in the world in 2012, which other tech company held the record?", "answer":"Microsoft"},
+      { "question":"Bose is an audio technology company from which country?", "answer":"United States"},    
+      { "question":"Companies offering ad serving work in which market?", "answer":"Advertising"},  
+      { "question":"Bixby is the assistant on which brand of smartphones?", "answer":"Samsung"}, 
+      { "question":"Blogger is a writing platform owned by which company?", "answer":"Google"},  
+      { "question":"Brian Acton and Jan Koum developed which popular messaging app?", "answer":"WhatsApp"},  
+      { "question":"CMYK stands for cyan, magenta, yellow, and what?", "answer":"Black"},   
+      { "question":"Creators of which website described it as a 'catalogue of ideas'?", "answer":"Pinterest"},  
+      { "question":"Bravia was a range of televisions made by which company?", "answer":"Sony"},  
+      { "question":"Creating the appearance of movement with drawn objects is known as what?", "answer":"Animation"},  
+      { "question":"BTC is a common abbreviation for which cryptocurrency?", "answer":"Bitcoin"},  
+      { "question":"Cloud Print is a smartphone printing app made by which company?", "answer":"Google"}
+    ]

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Dojo</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="techQuizController.js"></script>
+</head>
+<body ng-app="techApp">
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="75px" width="100%" > 
+        </div>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="about.html"> About Us </a></li></th>
+            <li><a href="#"> Contact Us </a></li>
+        </ul>
+    </nav>
+        <div class="main">
+            <div class="quiz_area">
+                     <div align="center"><p>Tech Quiz</p></div>
+                     <div ng-controller="techCtrl">
+                      <table align="center" border="1">
+                        <tr>
+                         <th>Question</th>
+                         <th>Answers</th>
+                         </tr>
+                         <tr ng-repeat="techquiz in tech">
+                          <td>{{techquiz.question}}</td>
+                          <td>{{techquiz.answer}}</td>
+                       </tr>
+                      </table>
+               
+            </div>
+        </div>
+    
+</body>
+</html>
