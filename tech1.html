@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Dojo</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script type="text/javascript" src="techQuizController.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="75px" width="100%" > 
+        </div>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="about.html"> About Us </a></li></th>
+            <li><a href="#"> Contact Us </a></li>
+        </ul>
+    </nav>
+<div class="main">
+    <div class="quiz-area" style="padding-top: 10px;">
+    <div ng-app="techApp" ng-controller="techCtrl">
+    
+    <!--<p>Type a keyword:</p>
+    
+    <p><input type="text" ng-model="ques"></p>
+    
+    <ul>
+      <li ng-repeat="techquiz in tech| filter:ques" >
+        {{ techquiz }}
+      </li>
+    </ul>-->
+    <table border="1" width="700px">
+        <tr>
+        <th>Question</th>
+        <th>Answer</th>
+        </tr>
+        
+        <tr>
+            <td><input type="button" value="Order By Question" ng-click="orderByMe('question')" /></td>
+        </tr>
+        <tr ng-repeat="techquiz in tech | orderBy:myOrderBy">
+            <td>{{techquiz.question}}</td>
+            <td>{{techquiz.answer}}</td>
+            </tr>
+        </table>
+        
+    
+    </div>
+    
+    <script>
+         var techAppModule = angular.module("techApp", []);
+     techAppModule.controller("techCtrl", function ($scope,$http){
+       $http.get('tech.json').success(function(data){
+        $scope.tech = data;
+       }).error(function(data,status){
+       console.error('Fail to load data', status, data);
+       $scope.tech = { };
+      });
+      $scope.orderByMe = function(techquiz) {
+        $scope.myOrderBy = techquiz;
+    }
+     });
+
+            //angular.module('techApp', []).controller('techCtrl', function($scope) {
+            //$scope.tech = [
+                'Charles Babbage invented the first what?',
+                'Computers calculate by using circuits called logic what?',
+                'Blaupunkt is a car audio brand from which country?',
+                'Computer movie company Pixar is owned by which brand?',
+                'Clarence Birdseye invented which industry?',
+                'Compaq was bought by which other large computer brand in 2007?',
+                'Change.org carries which sort of content?',
+                'Cellphones sold under the Pixel brandname are made by which company?',
+                'Before Apple became the most valuable company in the world in 2012, which other tech company held the record?',
+                'Bose is an audio technology company from which country?',
+                'Companies offering ad serving work in which market?',
+                'Bixby is the assistant on which brand of smartphones?',
+                'Blogger is a writing platform owned by which company?',
+                'Brian Acton and Jan Koum developed which popular messaging app?',
+                'CMYK stands for cyan, magenta, yellow, and what?',
+                'Creators of which website described it as a "catalogue of ideas"?',
+                'Bravia was a range of televisions made by which company?',
+                'Creating the appearance of movement with drawn objects is known as what?',
+                'BTC is a common abbreviation for which cryptocurrency?',
+                'Cloud Print is a smartphone printing app made by which company?'
+
+
+          //  ];
+        //});
+        </script>
+    </div>
+</div>
+
+</body>

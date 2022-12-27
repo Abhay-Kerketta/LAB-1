@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<link rel="stylesheet" href="styles1.css">
+</head>
+<body ng-app="myApp">
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="75px" width="100%" > 
+        </div>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="about.html"> About Us </a></li>
+            <li><a href="settings.html"> Settings </a></li>
+        </ul>
+    </nav>
+<div class="main">
+    <div class="category">
+    <ul>
+    <li><a href="#!/car">Car</a></li>
+    <li><a href="#!/movie">Movie</a></li>
+    <li><a href="#!/science">Science</a></li>
+    <li><a href="#!/sports">Sports</a></li>
+    </ul>
+</div>
+
+
+<div ng-view style="padding-left:250px"></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config("$routeProvider",function($routeProvider) {
+    $routeProvider
+    .when("/home", {
+        templateUrl : "/menu.html"
+    })
+    .when("/car", {
+        templateUrl : "/views/car.html"
+    })
+    .when("/movie", {
+        templateUrl : "/views/movie.html"
+    })
+    .when("/science", {
+        templateUrl : "/views/science.html"
+    })
+    .when("/sports", {
+        templateUrl : "/views/sports.html"
+    })
+    otherwise({
+        redirectTo: '/home'
+    })
+})
+</script>
+</div>
+</body>
+</html>
