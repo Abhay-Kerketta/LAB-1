@@ -1,0 +1,66 @@
+[{ "category":
+ {"car":[
+    {"question":"In which year did Henry Ford first launch his mass production plant for the Model T?", "answer":"12-May"},
+    {"question":"In which year did the Civic Hybrid debut?", "answer":"2003"},
+    {"question":"In which town was the Austin-Healey Sprite produced?", "answer":"Gremlin"},
+    {"question":"n which year did Ford establish Vauxhall Motors in the UK?", "answer":"1960"},
+    {"question":"In which year was Skoda founded?", "answer":"1940"},
+    {"question":"In which year was Citreon founded?", "answer":"1919"},
+    {"question":"In which year was Volvo founded?", "answer":"1927"},
+    {"question":"In which year was Honda founded?", "answer":"1948"},
+    {"question":"In which year was Mercedes-Benz founded?", "answer":"2019"},
+    {"question":"In which UK town is the Land Rover plant?", "answer":"Solihull"},
+    {"question":"In which year was GM founded?", "answer":"1908"},
+    {"question":"In which year was the Austin Maestro launched?", "answer":"1983"}
+    
+  ]},
+"sports":[
+    {"question":"Which player has played a record of 21 World Cup matches for Argentina?", "answer":"Diego Maradona"},
+    {"question":"Which player has scored the first goal for Australia at the World Cups?", "answer":"Tim Cahill"},
+    {"question":"Which player was the Argentinian top scorer at the 2018 World Cup?", "answer":"Sergio Agüero"},
+    {"question":"Which player didn't score for Argentina in the 4-3 loss to France in the Round of 16 at the 2018 World Cup?", "answer":"Lionel Messi"},
+    {"question":"Which player scored the winning goal for France against Portugal at the 2006 World Cup semi-final?", "answer":"Zinedine Zidane"},
+    {"question":"Which player in 2002 scored the fastest goal in World Cup history just 10.8 seconds after kick-off?", "answer":"Hakan Sukur"},
+    {"question":"Which Russian player scored twice in the opening match against Saudi Arabia at the 2018 World Cup?", "answer":"Denis Cheryshev"},
+    {"question":"Which team was the first to win three World Cup trophies?", "answer":"Brazil"},
+    {"question":"Which player is Brazil's World Cup leading scorer?", "answer":"Ronaldo"},
+    {"question":"Which player has the most appearances for Netherlands at the World Cups?", "answer":"Wesley Sneijder"},
+    {"question":"Which player has the most appearances as captain at the World Cup?", "answer":"Rafael Márquez"},
+    {"question":"Which player is the oldest one to appear on a World Cup game with 45 years and 161 days?", "answer":"Essam El Hadary"}
+
+  ]},
+
+  {"science":[
+    {"question":"How long does it take for Venus to rotate once on its axis (in earth days)?", "answer":"224"},
+    {"question":"Which of these moons of Jupiter is the largest?", "answer":"Ganymede"},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "}
+
+  ]},
+
+  {"sports":[
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "},
+    {"question":" ", "answer":" "}
+
+  ]}
+]

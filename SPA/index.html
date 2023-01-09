@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<script src="./lib/angular.min.js"></script>
+<script src="./lib/angular-route.js"></script>
+<script src="module.js"></script>
+<link rel="stylesheet" href="styles1.css">
+
+<body>
+    <nav> 
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="75px" width="100%" > 
+        </div>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="login.html"> Login </a></li>
+            <li><a href="about.html"> About Us </a></li>
+            <li><a href="settings.html"> Settings </a></li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <div class="category" style="padding-left: 500px; padding-top:50px;">
+        <ul style="list-style: none">
+        <li><a href="#!/car">Car</a></li>
+        <li><a href="#!/movie">Movie</a></li>
+        <li><a href="#!/science">Science</a></li>
+        <li><a href="#!/sports">Sports</a></li>
+        </ul>
+    </div>
+
+<div ng-view style="padding-left:450px; padding-top:50px;"></div>
+
+
+</body>
+</html>

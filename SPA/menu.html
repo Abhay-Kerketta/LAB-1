@@ -4,6 +4,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 <link rel="stylesheet" href="styles1.css">
+<script src="module.js"></script>
 </head>
 <body ng-app="myApp">
     <nav>
@@ -28,32 +29,8 @@
 </div>
 
 
-<div ng-view style="padding-left:250px"></div>
+<div class="ng-view" style="padding-left:250px;"></div>
 
-<script>
-var app = angular.module("myApp", ["ngRoute"]);
-app.config("$routeProvider",function($routeProvider) {
-    $routeProvider
-    .when("/home", {
-        templateUrl : "/menu.html"
-    })
-    .when("/car", {
-        templateUrl : "/views/car.html"
-    })
-    .when("/movie", {
-        templateUrl : "/views/movie.html"
-    })
-    .when("/science", {
-        templateUrl : "/views/science.html"
-    })
-    .when("/sports", {
-        templateUrl : "/views/sports.html"
-    })
-    otherwise({
-        redirectTo: '/home'
-    })
-})
-</script>
 </div>
 </body>
 </html>

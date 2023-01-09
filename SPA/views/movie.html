@@ -8,85 +8,17 @@ td:hover{
     filter: blur(0);
 }
 </style>
-<table width="500px">
+<table width="600px" height="700px" >
     <tr>
-        <th>Who was the voice of Scar in 'The Lion King'?</th>
+        <th><p>{{msg}}</p></th>
     </tr>
     <tr>
-        <td>Jeremy Irons</td>
+        <th>Questions</th>
+        <th>Answers</th>
     </tr>
-    <tr></tr>
-    <tr>
-        <th>What does Gru want to steal in 'Despicable Me'?</th>
+    <tr ng-repeat="movie in moviedata">
+        <th>{{movie.question }}</th>
+        <td>{{movie.answer}}</td><br /><br />
     </tr>
-    <tr>
-        <td>The Moon</td>
-    </tr>
-    <tr></tr>
-    <tr>
-        <th>The Mousekewitzs from 'An American Tail' come from what country?</th>
-    </tr>
-    <tr>
-        <td>Russia</td>
-    </tr>
-    <tr></tr>
-    <tr>
-        <th>Who did the voice of the vegetarian cat Tiger in 'An American Tail'?</th>
-    </tr>
-    <tr>
-        <td>Dom DeLuise</td>
-    </tr><br/>
-    <tr></tr>
-    <tr>
-        <th>What is the name of the Corpse Bride in 'Corpse Bride'?</th>
-    </tr>
-    <tr>
-        <td>Emily</td>
-    </tr><br/>
-    <tr></tr>
-    <tr>
-        <th>What family runs the chicken farm in 'Chicken Run'?</th>
-    </tr>
-    <tr>
-        <td>The Tweedys</td>
-    </tr><br/>
-    <tr></tr>
-    <tr>
-        <th>What Monty Python member voiced King Harold in 'Shrek 2'?</th>
-    </tr>
-    <tr>
-        <td>John Cleese</td>
-    </tr><br/>
-    <tr></tr>
-    <tr>
-        <th>Who did the voice of Horton in the movie version of 'Horton Hears a Who'?</th>
-    </tr>
-    <tr>
-        <td>Jim Carrey</td>
-    </tr><br/>
-    <tr></tr>
-    <tr>
-        <th>John Smith is a character in which animated film?</th>
-    </tr>
-    <tr>
-        <td>Pocahontas</td>
-    </tr><br/>
-    <tr>
-        <th>Zazu is a character in which animated film?</th>
-    </tr>
-    <tr>
-        <td>The Lion King</td>
-    </tr><br/>
-    <tr>
-        <th>What celebrity does a government ad for the new Grand Canyon in 'The Simpsons Movie'?</th>
-    </tr>
-    <tr>
-        <td>Tom Hanks</td>
-    </tr><br/>
-    <tr>
-        <th>Bruce was a character in which animated film?</th>
-    </tr>
-    <tr>
-        <td>Finding Nemo</td>
-    </tr><br/>
+
 </table>

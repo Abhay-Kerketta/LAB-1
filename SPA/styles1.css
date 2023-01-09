@@ -52,6 +52,18 @@ div.category li a{
   list-style:none;
   transition:  all 0.4s ease 0s;
 }
+div.category a:link, a:visited {
+  background-color: #2974d5;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+div.category a:hover, a:active {
+  background-color: rgb(85, 155, 205);
+}
 div.cookies{
   width:100%;
   padding-top: 100px;
